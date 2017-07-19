@@ -1,15 +1,16 @@
-class Time:
-    """Time abstract data type (ADT) definition"""
-
+class MyClass:
     def __init__(self):
-        """Initializes hour, minute and second to zero"""
+        self._name = "My Python Class"
 
-        self.hour = 0   # 0~23
-        self.minute = 0 # 0~59
-        self.second = 0 # 0~59
+    def get_name(self):
+        return self._name
 
-    def printMilitary(self):
-        """Prints object of class Time in military format"""
+    def set_name(self, new_name):
+        self._name = new_name
 
-        print "%.2d:%.2d:%.2d" % \
-              (self.hour, self.minute, self.second),
+print MyClass().get_name()
+
+mc = MyClass()
+mc.set_name("My New Cool Name")
+
+print mc.get_name()
